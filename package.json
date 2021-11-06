@@ -16,7 +16,10 @@
     "url": "https://github.com/prig25/ciphering-cli-tool/issues"
   },
   "homepage": "https://github.com/prig25/ciphering-cli-tool#readme",
-  "dependencies": {
-    "eslint": "^8.2.0"
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2"
   }
 }
