@@ -25,7 +25,7 @@ module.exports =
       currentIndex === firstArrElement ? outputDataString += arr[engUpAlph.length - 1] : outputDataString += arr[currentIndex - delta];
     };
 
-    switch (isCoding) {
+    switch (+isCoding) {
       case coding:
         inputDataArr.forEach((symbol) => {
           const charCode = symbol.charCodeAt();

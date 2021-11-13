@@ -5,10 +5,9 @@ module.exports =
     let rot8Index = null;
     const engUpAlph = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     const engLowAlph = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const firstArrElement = 0;
     const lastArrElement = engUpAlph.length - 1;
     const delta = 8;
-    const deltaChars = 7;
+    const deltaChars = delta - 1;
     const coding = 1;
     const decoding = 0;
     const inputDataArr = inputDataStr.split('');
@@ -29,7 +28,7 @@ module.exports =
       currentIndex <= deltaChars ? outputDataString += arr[rot8Index] : outputDataString += arr[currentIndex - delta];
     };
 
-    switch (isCoding) {
+    switch (+isCoding) {
       case coding:
         inputDataArr.forEach((symbol) => {
           const charCode = symbol.charCodeAt();
