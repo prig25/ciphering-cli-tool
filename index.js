@@ -11,7 +11,7 @@ const checkParameters = require('./src/checkParameters');
 delete argv['_'];
 
 const errorInput = 'Error with code 1: input file not found...\n';
-const errorOutput = 'Error with code 2: output file not .txt format...\n';
+const errorOutput = 'Error with code 2: output file is not .txt format...\n';
 const errorConfig = 'Error with code 3: error -c, check configs please...\n';
 const errorDouble = 'Error with code 4: double parameters, check parameters please...\n';
 const errorParameters = 'Error with code 5: wrong parameters... Should be only -c, -i and -o...\n';
