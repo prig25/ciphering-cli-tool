@@ -17,7 +17,7 @@ $ node index.js -c 'C1-C1-R0-A' -i './input.txt' -o './output.txt'
 > `Myxn xn nbdobm. Tbnnfzb ferlm "_" nhteru!`
 
 2. Аргументы могут быть только 3 видов:
-- `config` - `-c`
+- `config` - `-c` - обязательный!
 - `input` - `-i`
 - `output` - `-o`
 
