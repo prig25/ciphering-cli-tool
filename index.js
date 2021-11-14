@@ -31,7 +31,6 @@ const configs = argv.c.split('-');
 const cipherNumber = 0;
 const codingNumber = 1;
 const warningStdin = `Completed, check ${outputFile} file... For exit click ctrl+c... For resume send other text...\n`;
-const warningFinish = `Completed, check ${outputFile} file...\n`;
 
 const readStream = inputFile && fs.createReadStream(inputFile);
 const writeStream = outputFile && fs.createWriteStream(outputFile);
