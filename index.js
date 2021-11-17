@@ -1,5 +1,4 @@
 const fs = require('fs');
-const argv = require('minimist')(process.argv);
 const createCaesarStream = require('./src/caesarStream');
 const createAtbashStream = require('./src/atbashStream');
 const createRot8Stream = require('./src/rot8Stream');
@@ -8,13 +7,22 @@ const checkInputFile = require('./src/checkInputFile');
 const checkOutputFile = require('./src/checkOutputFile');
 const checkParameters = require('./src/checkParameters');
 
-delete argv['_'];
-
 const errorInput = 'Error with code 1: input file not found...\n';
 const errorOutput = 'Error with code 2: output file is not .txt format...\n';
 const errorConfig = 'Error with code 3: error -c, check configs please...\n';
 const errorDouble = 'Error with code 4: double parameters, check parameters please...\n';
 const errorParameters = 'Error with code 5: wrong parameters... Should be only -c, -i and -o...\n';
+
+const argvArr = process.argv.slice(2);
+const argv = {};
+for (let i = 0; i < argvArr.length; i += 2) {
+  if (Object.keys(argv).some(key => key === argvArr[i].slice(-1))) {
+    process.stderr.write(errorDouble);
+    process.exit(4);
+  } else {
+    argv[argvArr[i].slice(-1)] = argvArr[i + 1];
+  }
+}
 
 checkParameters(argv, errorParameters);
 
