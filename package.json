@@ -4,7 +4,8 @@
   "description": "ciphering-cli-tool",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^27.3.1"
   }
 }
